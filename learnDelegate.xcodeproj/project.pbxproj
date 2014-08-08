@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F548A3B51993806400133D13 /* MSBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F548A3B41993806400133D13 /* MSBlockViewController.m */; };
 		F5B0515019920FF8005E4106 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0514F19920FF8005E4106 /* Foundation.framework */; };
 		F5B0515219920FF8005E4106 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0515119920FF8005E4106 /* CoreGraphics.framework */; };
 		F5B0515419920FF8005E4106 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0515319920FF8005E4106 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F548A3B31993806400133D13 /* MSBlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBlockViewController.h; sourceTree = "<group>"; };
+		F548A3B41993806400133D13 /* MSBlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBlockViewController.m; sourceTree = "<group>"; };
 		F5B0514C19920FF8005E4106 /* learnDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B0514F19920FF8005E4106 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5B0515119920FF8005E4106 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +129,8 @@
 				F5B051821992131E005E4106 /* MSProtocol.m */,
 				F5B05184199213F8005E4106 /* MSSpeaker.h */,
 				F5B05185199213F8005E4106 /* MSSpeaker.m */,
+				F548A3B31993806400133D13 /* MSBlockViewController.h */,
+				F548A3B41993806400133D13 /* MSBlockViewController.m */,
 			);
 			path = learnDelegate;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				F5B05186199213F8005E4106 /* MSSpeaker.m in Sources */,
 				F5B051831992131E005E4106 /* MSProtocol.m in Sources */,
 				F5B0518019921013005E4106 /* MSViewController.m in Sources */,
+				F548A3B51993806400133D13 /* MSBlockViewController.m in Sources */,
 				F5B0515C19920FF8005E4106 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +462,7 @@
 				F5B0517A19920FF8005E4106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5B0517B19920FF8005E4106 /* Build configuration list for PBXNativeTarget "learnDelegateTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				F5B0517D19920FF8005E4106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

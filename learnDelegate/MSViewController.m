@@ -8,8 +8,11 @@
 
 #import "MSViewController.h"
 #import "MSSpeaker.h"
+#import "MSBlockViewController.h"
 
 @interface MSViewController ()
+
+@property UILabel *label;
 
 @end
 
@@ -20,15 +23,26 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.view = [[UIView alloc] initWithFrame:CGRectMake(0,0,320,480)];
-        UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(100, 40, 100, 50)];
-        UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 50)];
+        self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+        UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(30, 140, 240, 50)];
+        UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(30, 200, 240, 50)];
+        [btn1 setTitle:@"Alert your color" forState:UIControlStateNormal];
+        [btn2 setTitle:@"Alert your color" forState:UIControlStateNormal];
         [btn1 setBackgroundColor:[UIColor redColor]];
         [btn2 setBackgroundColor:[UIColor blueColor]];
         [btn1 addTarget:self action:@selector(selector1:) forControlEvents:UIControlEventTouchUpInside];
         [btn2 addTarget:self action:@selector(selector2:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn1];
         [self.view addSubview:btn2];
+        
+        UIButton *btn3 = [[UIButton alloc]initWithFrame:CGRectMake(100, 290, 100, 50)];
+        [btn3 setBackgroundColor:[UIColor greenColor]];
+        [btn3 setTitle:@"Block" forState:UIControlStateNormal];
+        [btn3 addTarget:self action:@selector(selector3:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn3];
+        
+        _label = [[UILabel alloc]initWithFrame:CGRectMake(30, 350, 299, 100)];
+        [self.view addSubview:_label];
     }
     return self;
 }
@@ -57,6 +71,16 @@
     self.delegate = speaker1;
     [self.delegate alertYourColor:@"blue"];
 }
+
+-(IBAction)selector3:(id)sender{
+    MSBlockViewController *blockvc = [[MSBlockViewController alloc]init];
+    blockvc.title = @"input text here";
+    blockvc.textBlock = ^void(NSString* string){
+        [_label setText:string];
+    };
+    [self.navigationController pushViewController:blockvc animated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
